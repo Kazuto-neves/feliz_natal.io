@@ -27,12 +27,12 @@ async function typeMessage() {
             terminalOutput.appendChild(span);
         }
         index++;
-        await new Promise(resolve => setTimeout(resolve, 100)); // Usando Promise para setTimeout
-        await typeMessage(); // Chamada recursiva
+        await new Promise(resolve => setTimeout(resolve, 100));
+        await typeMessage();
     } else {
         terminalOutput.appendChild(cursor);
-        await new Promise(resolve => setTimeout(resolve, 1000)); // Usando Promise para setTimeout
-        await deleteMessage(); // Chamada para deleteMessage
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        await deleteMessage();
     }
 }
 
@@ -42,37 +42,36 @@ async function deleteMessage() {
             terminalOutput.removeChild(terminalOutput.lastChild);
         }
         index--;
-        await new Promise(resolve => setTimeout(resolve, 50)); // Usando Promise para setTimeout
-        await deleteMessage(); // Chamada recursiva
+        await new Promise(resolve => setTimeout(resolve, 50));
+        await deleteMessage(); 
     } else {
         index = 0;
-        terminalOutput.textContent = ">_ "; // Reinicia o terminal com >_
+        terminalOutput.textContent = ">_ ";
         generateRandomColors();
-        await new Promise(resolve => setTimeout(resolve, 500)); // Usando Promise para setTimeout
-        await typeMessage(); // Chamada para typeMessage
+        await new Promise(resolve => setTimeout(resolve, 500));
+        await typeMessage();
     }
 }
 
 const cursor = document.querySelector('.cursor');
 
 async function changeStyles() {
-    // Muda a cor da borda e do box shadow do terminal
     const terminal = document.querySelector('.terminal');
     const color = colors[colorIndex % colors.length];
-    terminal.style.borderColor = color; // Muda a cor da borda
-    terminal.style.boxShadow = `0 0 20px ${color}`; // Muda o box shadow
+    terminal.style.borderColor = color; 
+    terminal.style.boxShadow = `0 0 20px ${color}`;
     colorIndex++;
 }
 
 async function changeDropShadow() {
     images.forEach((img, i) => {
-        const color = colors[(colorIndex + i) % colors.length]; // Cor diferente para cada imagem
+        const color = colors[(colorIndex + i) % colors.length];
         img.style.filter = `drop-shadow(0 0 10px ${color})`;
     });
 }
 
 document.addEventListener("DOMContentLoaded", async function() {
-    terminalOutput.textContent = ">_ "; // Adiciona >_ no início
+    terminalOutput.textContent = ">_ ";
     generateRandomColors();
     await typeMessage();
 });

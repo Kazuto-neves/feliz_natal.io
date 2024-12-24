@@ -14,12 +14,15 @@
   <body>
     <div id="main-container">
       <div class="left-column">
-        <img src="./img/1b246d144cf2dd8a570719cc90865b65-ilustracao-de-bateria.webp" alt="Ilustração de bateria">
-        <img src="./img/guitar-159362_1280.webp" alt="Ilustração de guitarra">
+        <img
+          src="./img/1b246d144cf2dd8a570719cc90865b65-ilustracao-de-bateria.webp"
+          alt="Ilustração de bateria"
+        />
+        <img src="./img/guitar-159362_1280.webp" alt="Ilustração de guitarra" />
       </div>
       <div class="center-column">
         <div class="horizontal">
-          <div class="horizontal" style="position: absolute;">
+          <div class="horizontal" style="position: absolute">
             <span class="musical-note">𝄛</span>
             <span class="musical-note">𝄛</span>
             <span class="musical-note">𝄛</span>
@@ -44,18 +47,28 @@
           <span class="letter">l</span>
         </div>
         <div class="horizontal">
-          <div style="position: absolute;">
+          <div style="position: absolute">
             <span class="musical-note">𝄛</span>
           </div>
           <span class="musical-note">𝄞</span>
         </div>
       </div>
       <div class="right-column">
-        <img src="./img/pngtree-silhouette-design-of-a-male-singer-in-a-hat-png-image_13012183.png" alt="Silhueta de cantor">
-        <img src="./img/teclado.png" alt="Teclado">
+        <img
+          src="./img/pngtree-silhouette-design-of-a-male-singer-in-a-hat-png-image_13012183.png"
+          alt="Silhueta de cantor"
+        />
+        <img src="./img/teclado.png" alt="Teclado" />
       </div>
     </div>
-    <audio aria-label="Música de Natal" class="hidden" id="song" controls autoplay loop>
+    <audio
+      aria-label="Música de Natal"
+      class="hidden"
+      id="song"
+      controls
+      autoplay
+      loop
+    >
       <source
         src="./song/silent-night-piano-version-christmas-background-music-12457.mp3"
         type="audio/mpeg"
@@ -63,13 +76,15 @@
       Seu navegador não suporta o elemento de áudio.
     </audio>
     <script>
-      document.getElementsByTagName('body')[0].addEventListener('click', function() {
-          const audio = document.getElementById('song');
-          audio.play().catch(error => {
-              console.log("Erro ao tentar tocar o áudio:", error);
+      document
+        .getElementsByTagName("body")[0]
+        .addEventListener("click", function () {
+          const audio = document.getElementById("song");
+          audio.play().catch((error) => {
+            console.log("Erro ao tentar tocar o áudio:", error);
           });
-      });
-  </script>
+        });
+    </script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

@@ -31,13 +31,15 @@
       Seu navegador não suporta o elemento de áudio.
     </audio>
     <script>
-      document.getElementsByTagName('body')[0].addEventListener('click', function() {
-          const audio = document.getElementById('song');
-          audio.play().catch(error => {
-              console.log("Erro ao tentar tocar o áudio:", error);
+      document
+        .getElementsByTagName("body")[0]
+        .addEventListener("click", function () {
+          const audio = document.getElementById("song");
+          audio.play().catch((error) => {
+            console.log("Erro ao tentar tocar o áudio:", error);
           });
-      });
-  </script>
+        });
+    </script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

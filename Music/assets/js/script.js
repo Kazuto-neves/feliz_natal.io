@@ -25,4 +25,4 @@ function changeColors() {
   index++;
 }
 
-setInterval(changeColors, 500); // Aumente o intervalo para 1000ms (1 segundo)
+setInterval(changeColors, 500);

@@ -6,7 +6,10 @@
     <title>Feliz Natal</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="./assets/css/libColor.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="main-container">
@@ -26,17 +29,19 @@
       </div>
     </div>
     <audio class="hidden" id="song" controls autoplay loop>
-        <source src="./song/jingle-bells-278637.mp3" type="audio/mpeg">
-        Seu navegador não suporta o elemento de áudio.
+      <source src="./song/jingle-bells-278637.mp3" type="audio/mpeg" />
+      Seu navegador não suporta o elemento de áudio.
     </audio>
     <script>
-      document.getElementsByTagName('body')[0].addEventListener('click', function() {
-          const audio = document.getElementById('song');
-          audio.play().catch(error => {
-              console.log("Erro ao tentar tocar o áudio:", error);
+      document
+        .getElementsByTagName("body")[0]
+        .addEventListener("click", function () {
+          const audio = document.getElementById("song");
+          audio.play().catch((error) => {
+            console.log("Erro ao tentar tocar o áudio:", error);
           });
-      });
-  </script>
+        });
+    </script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
