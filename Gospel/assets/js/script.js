@@ -15,4 +15,11 @@ function changeColors() {
   index++;
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  const audio = document.querySelector('audio');
+  audio.play().catch(error => {
+      console.log("Erro ao tentar tocar o áudio:", error);
+  });
+});
+
 setInterval(changeColors, 500);

@@ -77,7 +77,9 @@ document.addEventListener("DOMContentLoaded", async function() {
     await typeMessage();
 
     const audio = document.querySelector('audio');
-    audio.play();
+    audio.play().catch(error => {
+        console.log("Erro ao tentar tocar o áudio:", error);
+    });
 });
 
 setInterval(changeDropShadow, 500);
