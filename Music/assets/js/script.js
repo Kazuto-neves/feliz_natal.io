@@ -25,11 +25,4 @@ function changeColors() {
   index++;
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  const audio = document.getElementById('song');
-  audio.play().catch(error => {
-      console.log("Erro ao tentar tocar o áudio:", error);
-  });
-});
-
 setInterval(changeColors, 500); // Aumente o intervalo para 1000ms (1 segundo)

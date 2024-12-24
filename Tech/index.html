@@ -26,10 +26,18 @@
         <img src="./img/Python-logo-notext.svg.png" alt="Python logo" />
       </div>
     </div>
-    <audio aria-label="Música de Natal" class="hidden" id="song" controls autoplay loop>
+    <audio aria-label="Música de Natal" class="hidden" id="song" loop>
       <source src="./song/ac_xmas-eve.mp3" type="audio/mpeg" />
       Seu navegador não suporta o elemento de áudio.
     </audio>
+    <script>
+      document.getElementsByTagName('body')[0].addEventListener('click', function() {
+          const audio = document.getElementById('song');
+          audio.play().catch(error => {
+              console.log("Erro ao tentar tocar o áudio:", error);
+          });
+      });
+  </script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

@@ -75,11 +75,6 @@ document.addEventListener("DOMContentLoaded", async function() {
     terminalOutput.textContent = ">_ "; // Adiciona >_ no início
     generateRandomColors();
     await typeMessage();
-
-    const audio = document.getElementById('song');
-    audio.play().catch(error => {
-        console.log("Erro ao tentar tocar o áudio:", error);
-    });
 });
 
 setInterval(changeDropShadow, 500);
