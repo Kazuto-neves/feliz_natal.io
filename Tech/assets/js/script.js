@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", async function() {
     generateRandomColors();
     await typeMessage();
 
-    const audio = document.querySelector('audio');
+    const audio = document.getElementById('song');
     audio.play().catch(error => {
         console.log("Erro ao tentar tocar o áudio:", error);
     });
