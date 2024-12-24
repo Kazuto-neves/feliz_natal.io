@@ -1,0 +1,124 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+body {
+    background: linear-gradient(to bottom, #03023f, #1a1a80);
+    background-size: 100% 200%;
+    animation: backgroundAnimation 10s ease infinite;
+    font-family: 'Roboto', sans-serif;
+}
+
+#main-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que as colunas se ajustem em telas menores */
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.left-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-column img,
+.right-column img {
+    width: 200px;
+    /* Defina a largura desejada */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    margin: 10px 0;
+    /* Espaçamento entre as imagens */
+}
+
+.center-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.musical-note {
+    display: inline;
+    font-size: 4em;
+    transition: color 0.5s ease, transform 0.5s ease;
+}
+
+.letter {
+    display: inline;
+    font-size: 4em;
+    transition: color 0.5s ease, transform 0.5s ease;
+}
+
+.letter:hover,.musical-note:hover {
+    transform: scale(1.2);
+}
+
+.letter,
+.musical-note {
+    transition: filter 0.3s ease;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2em;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .letter {
+        font-size: 2.5em;
+    }
+
+    .musical-note {
+        font-size: 1.5em;
+    }
+
+    .left-column img,
+    .right-column img {
+        width: 150px;
+        height: auto;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 400px) {
+    #main-container {
+        flex-direction: column;
+    }
+
+    .letter {
+        font-size: 2em;
+    }
+
+    .left-column img,
+    .right-column img {
+        width: 100px;
+        height: auto;
+        margin: 2.5px 0;
+    }
+}
